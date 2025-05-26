@@ -1,4 +1,3 @@
-// js/event.js
 import { getDomElements } from "./dom.js";
 
 const { btnRoll, btnHold, btnNew, diceEl } = getDomElements();
@@ -15,12 +14,12 @@ import {
 
 import { init, switchPlayer } from "./logic.js";
 
-// 🎲 Бросок кубика
+// Roll the dice
 btnRoll.addEventListener("click", () => {
   if (isPlaying()) {
     const dice = Math.trunc(Math.random() * 6) + 1;
 
-    // Показываем кубик
+    // Show the dice
     diceEl.classList.remove("hidden");
     diceEl.src = `image/dice-${dice}.png`;
 
@@ -35,7 +34,7 @@ btnRoll.addEventListener("click", () => {
   }
 });
 
-// 📥 Удержание очков
+// Hold the score
 btnHold.addEventListener("click", () => {
   if (isPlaying()) {
     const activePlayer = getActivePlayer();
@@ -62,5 +61,5 @@ btnHold.addEventListener("click", () => {
   }
 });
 
-// 🔁 Новая игра
+// New game
 btnNew.addEventListener("click", init);

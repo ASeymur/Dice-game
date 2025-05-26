@@ -1,34 +1,44 @@
-// js/state.js
-// Внутренние переменные (не экспортируем напрямую)
+// Internal variables (do not export directly)
 let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
 
-// Геттеры
+// Getters
 export const getScores = () => scores;
 export const getCurrentScore = () => currentScore;
 export const getActivePlayer = () => activePlayer;
 export const isPlaying = () => playing;
 
-// Сеттеры
+// Setters
 export const setScores = (newScores) => {
   scores = newScores;
 };
 
 export const setCurrentScore = (newScore) => {
-  currentScore = newScore;
+  if (typeof newScore === "number" && !isNaN(newScore)) {
+    currentScore = newScore;
+  } else {
+    console.warn("Invalid currentScore value:", newScore);
+  }
 };
 
 export const setActivePlayer = (playerIndex) => {
-  activePlayer = playerIndex;
+  if (
+    typeof playerIndex === "number" &&
+    (playerIndex === 0 || playerIndex === 1)
+  ) {
+    activePlayer = playerIndex;
+  } else {
+    console.warn("Invalid active player index:", playerIndex);
+  }
 };
 
 export const setPlaying = (status) => {
   playing = status;
 };
 
-// Сброс состояния
+// Reset game state
 export const resetState = () => {
   scores = [0, 0];
   currentScore = 0;

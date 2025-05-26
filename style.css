@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,11 +12,11 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
-  color: #333;
-  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  color: #222;
+  background-image: linear-gradient(to top left, #006d77 0%, #264653 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +27,8 @@ main {
   position: relative;
   width: 100rem;
   height: 60rem;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(200px);
-  filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
@@ -59,7 +58,7 @@ main {
 .score {
   font-size: 8rem;
   font-weight: 300;
-  color: #c7365f;
+  color: #00b4d8;
   margin-bottom: auto;
 }
 
@@ -78,8 +77,8 @@ main {
 }
 
 .current {
-  background-color: #c7365f;
-  opacity: 0.8;
+  background-color: #00b4d8;
+  opacity: 0.85;
   border-radius: 9px;
   color: #fff;
   width: 65%;
@@ -92,7 +91,7 @@ main {
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 1.7rem;
-  color: #ddd;
+  color: #e0fbfc;
 }
 
 .current-score {
@@ -104,7 +103,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: #444;
+  color: #264653;
   background: none;
   border: none;
   font-family: inherit;
@@ -114,7 +113,6 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 
@@ -158,12 +156,12 @@ main {
 }
 
 .player--winner {
-  background-color: #2f2f2f;
+  background-color: #1d3557;
 }
 
 .player--winner .name {
   font-weight: 700;
-  color: #c7365f;
+  color: #00b4d8;
 }
 
 .hidden {
